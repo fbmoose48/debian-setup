@@ -36,7 +36,8 @@ sudo apt install openssh-server sshfs openvpn nmap net-tools -y
 #sudo apt install gnome-tweaks gnome-tweak-tool gnome-icon-theme dconf-editor chrome-gnome-shell solaar-gnome3 -y
 
 # Web
-#sudo apt install firefox openjdk-11-jre flashplugin-installer transmission tor -y
+#sudo apt install openjdk-11-jre flashplugin-installer transmission tor -y
+sudo apt install firefox --no-install-recommends --no-install-suggests -y
 
 # Build tools
 sudo apt install cmake gettext build-essential hwloc openssl numactl msr-tools geany -y
