@@ -7,9 +7,17 @@ sudo apt update
 sudo apt install xserver-xorg-core libxinerama-dev libfontconfig1-dev libharfbuzz-dev xorg-dev x11-xserver-utils xterm xserver-xorg-input-all -y
 sudo apt install xinit --no-install-recommends --no-install-suggests -y
 
+# Firmware (for AMDGPU/ucode/wifi)
+sudo apt install firmware-linux llvm clang -y
+sudo apt install amd64-microcode -y
+#sudo apt install intel-microcode -y
+#sudo apt install firmware-iwlwifi -y
+
 # Base system
-sudo apt install yaru-theme-icon gparted lxterminal spacefm-gtk3 unzip xarchiver nano nnn -y
-sudo apt install git htop spell neofetch powertop sysstat lm-sensors -y
+#sudo apt install yaru-theme-icon -y
+#sudo apt install adwaita-theme-icon -y
+sudo apt install gparted lxterminal spacefm-gtk3 unzip xarchiver nano nnn -y
+sudo apt install git curl htop spell neofetch powertop sysstat lm-sensors -y
 sudo apt install terminator --no-install-recommends --no-install-suggests -y
 
 # DWM
@@ -28,7 +36,7 @@ sudo apt install openssh-server sshfs openvpn nmap net-tools -y
 #sudo apt install gnome-tweaks gnome-tweak-tool gnome-icon-theme dconf-editor chrome-gnome-shell solaar-gnome3 -y
 
 # Web
-#sudo apt install openjdk-11-jre flashplugin-installer transmission tor -y
+#sudo apt install firefox openjdk-11-jre flashplugin-installer transmission tor -y
 
 # Build tools
 sudo apt install cmake gettext build-essential hwloc openssl numactl msr-tools geany -y
