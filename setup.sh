@@ -40,7 +40,7 @@ sudo apt install openssh-server sshfs openvpn nmap net-tools -y
 sudo apt install firefox --no-install-recommends --no-install-suggests -y
 
 # Build tools
-sudo apt install cmake gettext build-essential hwloc openssl numactl msr-tools geany -y
+sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev ocl-icd-opencl-dev gettext hwloc openssl numactl msr-tools geany -y
 
 # Coreboot
 #sudo apt install python gnat flex bison libncurses5-dev wget zlib1g-dev acpica-tools -y
