@@ -17,7 +17,7 @@ sudo apt install openssh-server sshfs openvpn nmap net-tools -y
 #sudo apt install synaptic apt-xapian-index conky solaar -y
 
 # Phosh GUI tools
-sudo apt install gparted xarchiver menulibre gnome-authenticator pinephone-tweaks gnome-tweaks gnome-tweak-tool gnome-icon-theme gnome-calendar-mobile gnome-weather gnome-screenshot modem-manager-gui pavucontrol gnome-firmware -y
+sudo apt install gparted xarchiver menulibre gnome-authenticator gnome-tweaks gnome-tweak-tool gnome-icon-theme gnome-calendar-mobile gnome-weather gnome-screenshot modem-manager-gui pavucontrol gnome-firmware -y
 
 # Web
 #sudo apt install firefox --no-install-recommends --no-install-suggests -y
