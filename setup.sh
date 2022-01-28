@@ -17,26 +17,16 @@ sudo apt install openssh-server sshfs openvpn nmap net-tools -y
 #sudo apt install synaptic apt-xapian-index conky solaar -y
 
 # Phosh GUI tools
-sudo apt install gparted xarchiver menulibre gnome-authenticator gnome-tweaks gnome-tweak-tool gnome-icon-theme siglo gnome-calendar-mobile gnome-weather gnome-screenshot modem-manager-gui pavucontrol gnome-firmware -y
+sudo apt install gparted xarchiver menulibre gnome-authenticator pinephone-tweaks gnome-tweaks gnome-tweak-tool gnome-icon-theme gnome-calendar-mobile gnome-weather gnome-screenshot modem-manager-gui pavucontrol gnome-firmware -y
 
 # Web
-#sudo apt install openjdk-11-jre flashplugin-installer transmission tor -y
 #sudo apt install firefox --no-install-recommends --no-install-suggests -y
 
 # Build tools
 #sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev ocl-icd-opencl-dev gettext hwloc openssl numactl msr-tools geany -y
 
 # Media
-#sudo apt install lame mpv vlc gthumb audacity soundconverter nextcloud-desktop gimp scribus -y
-
-# Add and Install PPAs
-#sudo add-apt-repository ppa:yannubuntu/boot-repair
-#sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-#sudo add-apt-repository ppa:mkusb/ppa
-#sudo add-apt-repository ppa:gezakovacs/ppa
-#sudo apt-get update -y
-#sudo apt-get install -y boot-repair grub-customizer
-#sudo apt-get install -y mkusb mkusb-nox unetbootin
+#sudo apt install lame mpv gthumb soundconverter -y
 
 # Add me to any groups I might need to be a part of:
 #sudo usermod -a -G video $USER
@@ -44,17 +34,8 @@ sudo apt install gparted xarchiver menulibre gnome-authenticator gnome-tweaks gn
 # Remove undesirable packages:
 #sudo apt purge gstreamer1.0-fluendo-mp3 deja-dup shotwell popularity-contest -y
 
-# Remove Assorted Arabic/Asian language font types
-#sudo apt purge ttf-arabeyes ttf-arphic-uming ttf-indic-fonts-core ttf-kochi-gothic ttf-kochi-mincho ttf-lao ttf-malayalam-fonts ttf-thai-tlwg ttf-unfonts-core -y
-
-#Remove dial up et al
-#sudo apt purge ppp pppconfig pppoeconf -y
-
-#Remove Gnome games
-#sudo apt purge gnome-games gnome-games-data gnome-cards-data aisleriot gnome-mahjongg gnome-mines gnome-sudoku -y
-
 ## Remove junk
-#sudo apt-get remove gnome-software-mobile -y
+sudo apt-get remove gnome-software gnome-software-common -y
 
 # Spelling
 sudo apt install aspell aspell-en -y
