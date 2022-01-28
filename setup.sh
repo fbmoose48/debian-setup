@@ -6,7 +6,7 @@ sudo apt update
 # Base system
 #sudo apt install yaru-theme-icon -y
 #sudo apt install adwaita-theme-icon -y
-sudo apt install unzip nano git curl htop neofetch powertop sysstat lm-sensors minicom progress android-tools-adb -y
+sudo apt install unzip nano git curl htop neofetch powertop sysstat lm-sensors minicom progress android-tools-adb openssh-server -y
 #sudo apt install lxterminal spacefm-gtk3
 #sudo apt install terminator --no-install-recommends --no-install-suggests -y
 
