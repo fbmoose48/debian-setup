@@ -3,28 +3,12 @@
 # Initial Update
 sudo apt update
 
-# Xorg
-sudo apt install xserver-xorg-core libxinerama-dev libfontconfig1-dev libharfbuzz-dev xorg-dev x11-xserver-utils xterm xserver-xorg-input-all -y
-sudo apt install xinit --no-install-recommends --no-install-suggests -y
-
-# Firmware (for AMDGPU/ucode/wifi)
-sudo apt install firmware-linux llvm clang -y
-sudo apt install amd64-microcode -y
-#sudo apt install intel-microcode -y
-#sudo apt install firmware-iwlwifi -y
-
 # Base system
 #sudo apt install yaru-theme-icon -y
 #sudo apt install adwaita-theme-icon -y
-sudo apt install gparted lxterminal spacefm-gtk3 unzip xarchiver nano nnn -y
-sudo apt install git curl htop spell neofetch powertop sysstat lm-sensors -y
-sudo apt install terminator --no-install-recommends --no-install-suggests -y
-
-# DWM
-sudo apt install fonts-hack fonts-powerline compton lxrandr lxappearance nitrogen stalonetray -y
-
-# Greeter
-#sudo apt install lightdm lightdm-gtk-greeter --no-install-recommends --no-install-suggests -y
+sudo apt install unzip nano git curl htop neofetch powertop sysstat lm-sensors minicom progress android-tools-adb -y
+#sudo apt install lxterminal spacefm-gtk3
+#sudo apt install terminator --no-install-recommends --no-install-suggests -y
 
 # Network
 sudo apt install openssh-server sshfs openvpn nmap net-tools -y
@@ -32,28 +16,18 @@ sudo apt install openssh-server sshfs openvpn nmap net-tools -y
 # Desktop tools
 #sudo apt install synaptic apt-xapian-index conky solaar -y
 
-# Gnome
-#sudo apt install gnome-tweaks gnome-tweak-tool gnome-icon-theme dconf-editor chrome-gnome-shell solaar-gnome3 -y
+# Phosh GUI tools
+sudo apt install gparted xarchiver menulibre gnome-authenticator gnome-tweaks gnome-tweak-tool gnome-icon-theme siglo gnome-calendar-mobile gnome-weather gnome-screenshot modem-manager-gui pavucontrol gnome-firmware -y
 
 # Web
 #sudo apt install openjdk-11-jre flashplugin-installer transmission tor -y
-sudo apt install firefox --no-install-recommends --no-install-suggests -y
+#sudo apt install firefox --no-install-recommends --no-install-suggests -y
 
 # Build tools
-sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev ocl-icd-opencl-dev gettext hwloc openssl numactl msr-tools geany -y
-
-# Coreboot
-#sudo apt install python gnat flex bison libncurses5-dev wget zlib1g-dev acpica-tools -y
+#sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev ocl-icd-opencl-dev gettext hwloc openssl numactl msr-tools geany -y
 
 # Media
 #sudo apt install lame mpv vlc gthumb audacity soundconverter nextcloud-desktop gimp scribus -y
-
-# Virtualization
-#sudo apt install virtualbox virtualbox-guest-additions-iso virtualbox-ext-pack -y
-#sudo usermod -a -G vboxusers $USER
-
-# Other
-#sudo apt install flatpak gnome-software-plugin-flatpak qt5-style-plugins furiusisomount timeshift chromium-browser -y
 
 # Add and Install PPAs
 #sudo add-apt-repository ppa:yannubuntu/boot-repair
@@ -65,7 +39,7 @@ sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev
 #sudo apt-get install -y mkusb mkusb-nox unetbootin
 
 # Add me to any groups I might need to be a part of:
-sudo usermod -a -G video $USER
+#sudo usermod -a -G video $USER
 
 # Remove undesirable packages:
 #sudo apt purge gstreamer1.0-fluendo-mp3 deja-dup shotwell popularity-contest -y
@@ -79,20 +53,27 @@ sudo usermod -a -G video $USER
 #Remove Gnome games
 #sudo apt purge gnome-games gnome-games-data gnome-cards-data aisleriot gnome-mahjongg gnome-mines gnome-sudoku -y
 
-#Add flathub repo
-#flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-#fix window buttons
-#gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
-
-#set icons to minimize on click
-#gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-
-#move apps button to top
-#gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top 'on'
-
 ## Remove junk
-#sudo apt-get remove rhythmbox -y
+#sudo apt-get remove gnome-software-mobile -y
+
+# Spelling
+sudo apt install aspell aspell-en -y
+# go into gedit and select preferences >> spelling >> preferences >> highlight misspelled words
+
+# Disable animations in Phosh
+gsettings set org.gnome.desktop.interface enable-animations false
+
+# Set "adaptive apps only" to "off"
+gsettings set sm.puri.phosh app-filter-mode '[]'
+# TUrn them back on
+#gsettings set sm.puri.phosh app-filter-mode '["adaptive"]'
+
+# Enableme experimental MMS in Chatty
+gsettings set sm.puri.Chatty experimental-features true
+
+#Enable fstrim
+#sudo systemctl enable fstrim.timer
+#sudo systemctl start fstrim.timer
 
 # Clean Apt-Cache
 sudo apt-get autoremove && sudo apt-get clean all && sudo apt-get autoclean all
